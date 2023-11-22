@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #04052e;
+}
+
+/* Estilização do cabeçalho */
+#cabecalho {
+    width: 80vw;
+    height: 10%;
+    display: flex;
+    justify-content: left;
+    margin: auto;
+    padding: 20px;
+}
+
+#cabecalho img {
+    width: 20%;
+    margin: auto 0;
+}
+
+#cabecalho div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#site-nome {
+    color: #c3bdf5;
+    /* font-weight: bold; */
+    font-size: 1.5em;
+    font-family: "Changa One", sans-serif;
+}
+
+/*Estilização do contéudo principal da página*/
+
+#conteudo-principal {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Container contendo as informações do aluno*/
+.card-aluno {
+    background-color: #22007c;
+    width: 30%;
+    height: 40%;
+}
