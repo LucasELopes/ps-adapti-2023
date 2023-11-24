@@ -3,15 +3,30 @@
 @section('subtitulo', 'Home')
 
 @section('conteudo')
-    <header id="cabecalho">
-      <div>
-        <img src="{{asset('user/img/page_seo_web_website_content_browser_search_job_find_icon_230037.svg')}}" alt="logo da GetJob">
-        <p id="site-nome">GetJob</p>
-      </div>
+    <header id="container-header">
+        <div id="cabecalho">
+          <h1>GetJob</h1>
+        </div>
     </header>
-    <main id="conteudo-principal">
-      <div class="card-aluno" >
-          
-      </div>
+    <main style="background-image: url('{{ asset('user/img/bg.jpg')}}');">
+        <div class="cards">
+            <div class="card">
+                <div class="card-cabecalho">
+                    <img src="{{asset('user/img/download.jpg')}}" alt="foto-usuario">
+                    <div class="card-cabecalho-info">
+                        <p>Lucas Lopes</p>
+                        <p>Ciência da Computação</p>
+                        <p>Cursando</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="{{asset('user/js/script.js')}}" ></script>
 @endsection
