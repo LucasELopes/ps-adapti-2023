@@ -23,4 +23,5 @@
 <body>
     @yield('conteudo')
 </body>
+    @yield('modal')
 </html>
