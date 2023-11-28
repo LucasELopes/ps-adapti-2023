@@ -7,12 +7,12 @@
         <div id="cabecalho">
             <div  class="cabecalho-info">
                 <div>
+                    <h1>GetJob</h1>
+                </div>
+                <div>
                     <div id="botao-tema" onclick="trocaTema()">
                         <button><img id="foto-botao-tema" src="{{asset('user/img/contrast_FILL0_wght400_GRAD0_opsz24.svg')}}" alt=""></button>
                     </div>
-                </div>
-                <div>
-                    <h1>GetJob</h1>
                 </div>
             </div>
             <div class="cabecalho-busca" onclick="busca()">

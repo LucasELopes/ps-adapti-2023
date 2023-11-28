@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 
   {{-- Icone na guia --}}
-  <link rel="shortcut icon" href="{{asset('user/img/page_seo_web_website_content_browser_search_job_find_icon_230037.svg')}}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{asset('user/img/Daco_583825.png')}}" type="image/x-icon">
   
   <title>GetJob - @yield('subtitulo')</title>
 </head>
