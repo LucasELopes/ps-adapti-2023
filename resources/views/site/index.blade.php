@@ -57,7 +57,7 @@
             <div class="card" id="card" onclick="abrirModal(this)" style="background-image: url('{{ asset('user/img/istockphoto-1183978184-612x612.jpg')}}'); background-size: container">
                 <div class="card-cabecalho">
                     <div class="card-cabecalho-info">
-                        <img src="{{asset('user/img/images.jpg')}}" alt="foto-usuario">
+                        <img src="{{asset('user/img/julius.jpg')}}" alt="foto-usuario">
                         <div>
                             <p>Julius Rock</p>
                             <p>Cursando Economia</p>
