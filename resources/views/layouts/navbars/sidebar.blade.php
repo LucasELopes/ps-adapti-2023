@@ -62,6 +62,14 @@
                                 </a>
                             </li>
                         </ul>
+                        <ul class="nav">
+                            <li class="nav-item{{ $activePage == 'log-list' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ route('candidato.index') }}">
+                                    <i class="sidebar-mini"><span class="material-icons">Candidato</span></i>
+                                    <span class="sidebar-normal">{{ __('Logs') }} </span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
             @endif

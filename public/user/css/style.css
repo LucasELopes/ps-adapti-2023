@@ -29,10 +29,13 @@
     transition: all 600ms ease;
     margin: auto;
 
-    max-width: 1024px;
+    width: 1024px;
+
+    padding: 10px;
 
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 #container-header.dark #cabecalho {
@@ -45,11 +48,48 @@
     font-size: 3em;
 }
 
+.cabecalho-info {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-busca input {
+    height: 3.3vh;
+    width: 15vw;
+    background-color: #b1c9f3;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 0 5px;
+}
+
+@media (max-width: 425px) {
+    #cabecalho {
+        flex-direction: column;
+        justify-content: none;
+    }
+
+    .cabecalho-busca input {
+        height: 2.5vh;
+        width: 65vw;
+    }
+
+    .cabecalho-busca input:focus {
+        border: 0;
+    }
+
+    #cabecalho {
+        padding: 1px 5px;
+    }
+
+    #cabecalho h1 {
+        font-size: 2.6em;
+    }
+}
 #botao-tema button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #botao-tema button img {
@@ -62,6 +102,7 @@ main {
     padding-top: 25vh;
     margin-top: 5vh;
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     background-size: 400px;
     transition: all 700ms ease;
@@ -88,7 +129,7 @@ main.dark .cards .card > * {
     padding: 40px;
     margin: auto;
 
-    background-color: rgb(44, 121, 248, 0.9);
+    background-color: rgba(44, 120, 243, 0.6);
     border: 5px dashed rgb(0, 0, 0);
     border-radius: 15px;
 
@@ -110,11 +151,16 @@ main.dark .cards .card > * {
     margin: auto;
 
     cursor: pointer;
-    padding-bottom: 20px;
+    padding-bottom: 2%;
 
     transition: all 500ms ease;
 }
 
+@media (max-width: 768px) {
+    .card {
+        background-size: 800px;
+    }
+}
 .card:hover {
     transform: scale(1.17);
 }
@@ -150,16 +196,10 @@ main.dark .cards .card > * {
     font-size: 80%;
 }
 
-/* @media (max-width: 425px) {
-    .card-cabecalho-info div {
-        flex-direction: column;
-        height: 45%;
-        line-height: 2.4vh;
-    }
-} */
-
 .card-cabecalho-info img {
-    width: 35%;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
     border-radius: inherit;
     border: 2px solid black;
     filter: inherit;
@@ -171,7 +211,6 @@ main.dark .cards .card > * {
 }
 
 .card-cabecalho-info div {
-    /* Alterar essa bomba*/
     display: flex;
     flex-direction: column;
     gap: 10px 0;
@@ -209,7 +248,7 @@ main.dark .cards .card > * {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 90;
+    /* z-index: 90; */
     backdrop-filter: blur(6px);
 }
 
@@ -228,8 +267,25 @@ main.dark .cards .card > * {
     max-width: 1024px;
     background-color: rgba(239, 240, 241);
     border-radius: 10px;
-    padding: 50px;
-    z-index: 100;
+    padding: 20px;
+    padding-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    background-size: 300px;
+    /* z-index: 100; */
+}
+
+.modal.dark {
+    filter: invert(1);
+}
+
+.modal.dark > * {
+    filter: invert(1);
 }
 
 .fechar {
@@ -255,7 +311,7 @@ main.dark .cards .card > * {
 
 @keyframes abrirModal {
     from {
-        transform: translate3d(0, -20px, -5px);
+        transform: translate3d(0, -30px, -10px);
     }
     to {
         transform: translate3d(0, 0, 0);
@@ -264,4 +320,72 @@ main.dark .cards .card > * {
 
 .abrir .modal {
     animation: abrirModal 0.5s;
+}
+
+/* Estilizando conteudo do modal */
+.modal-cabecalho {
+    width: 50%;
+    height: 30%;
+    background-color: #b0c8f3;
+    border-radius: 10px;
+    padding: 30px 50px;
+    border: 3px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.modal-cabecalho img {
+    border-radius: inherit;
+    width: 110px;
+    height: 110px;
+    border: 2px solid black;
+}
+
+.modal-cabecalho p {
+    color: #131518;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 425px) {
+    .modal-cabecalho {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .modal-cabecalho {
+        border: 2px solid black;
+        padding: 10px;
+    }
+
+    .modal-cabecalho p {
+        font-size: 15px;
+    }
+}
+
+.modal-corpo {
+    width: 100%;
+    background-color: #b0c8f3;
+    height: 250px;
+    padding: 10px 5px;
+    border-radius: inherit;
+    border: 3px solid black;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    background-color: #9bb2dd;
+    width: 10px;
+    border-radius: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #77a1ee;
+    height: 10px;
+    border-radius: inherit;
 }
